@@ -8,10 +8,7 @@ for _ in range(N):
     order = input()
     if order[0] in ('1', '2'):
         X = int(order[2:])
-        if order[0] == '1':
-            deq.appendleft(X)
-        elif order[0] == '2':
-            deq.append(X)
+        deq.appendleft(X) if order[0]=='1' else deq.append(X)
     elif order[0] == '3':
         print(deq.popleft()) if deq else print(-1)
     elif order[0] == '4':
